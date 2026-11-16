@@ -1,0 +1,20 @@
+{
+  "id": "85ca4719-701c-4ade-a457-30384266ffce",
+  "title": "Find 5 restaurants in New York, ZIP code 10001. Collect busi\u2026",
+  "provider": "mock",
+  "model": "",
+  "created_at": 1794303834.3925464,
+  "updated_at": 1794303873.9169555,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find 5 restaurants in New York, ZIP code 10001. Collect business name, address, phone number, website, email and rating. Show me the scraping configuration before starting the job. After I approve, run the existing scraper and export the results to Excel."
+    },
+    {
+      "role": "assistant",
+      "content": "I've reached the maximum number of tool calls for this turn. Please try rephrasing your request or breaking it into smaller steps."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

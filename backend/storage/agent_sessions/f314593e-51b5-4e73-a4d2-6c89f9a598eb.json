@@ -1,0 +1,20 @@
+{
+  "id": "f314593e-51b5-4e73-a4d2-6c89f9a598eb",
+  "title": "Show me the dashboard",
+  "provider": "mock",
+  "model": "",
+  "created_at": 1794301471.3211918,
+  "updated_at": 1794301492.2205567,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me the dashboard"
+    },
+    {
+      "role": "assistant",
+      "content": "I've reached the maximum number of tool calls for this turn. Please try rephrasing your request or breaking it into smaller steps."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

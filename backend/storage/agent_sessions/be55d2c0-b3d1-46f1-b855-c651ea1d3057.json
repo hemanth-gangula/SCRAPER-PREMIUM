@@ -1,0 +1,20 @@
+{
+  "id": "be55d2c0-b3d1-46f1-b855-c651ea1d3057",
+  "title": "Show me the dashboard",
+  "provider": "mock",
+  "model": "",
+  "created_at": 1794304401.491258,
+  "updated_at": 1794304403.5922804,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Show me the dashboard"
+    },
+    {
+      "role": "assistant",
+      "content": "\u26a0\ufe0f I detected a repeated identical call to **get_dashboard** with the same arguments. This would create an infinite loop, so I stopped.\n\nHere's what I found before stopping:\n\n- **get_dashboard**: {\"total_businesses\": 34, \"total_jobs\": 10, \"running_jobs\": 0, \"completed_jobs\": 0, \"dedup_total\": 0, \"quality_average\": 0, \"daily_quota_used\": 0}\n\nPlease rephrase your request or ask a more specific question."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

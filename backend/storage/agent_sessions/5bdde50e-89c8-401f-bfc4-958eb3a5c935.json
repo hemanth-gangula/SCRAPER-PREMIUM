@@ -1,0 +1,36 @@
+{
+  "id": "5bdde50e-89c8-401f-bfc4-958eb3a5c935",
+  "title": "hii",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "created_at": 1794822396.7325828,
+  "updated_at": 1794822434.6599886,
+  "messages": [
+    {
+      "role": "user",
+      "content": "hii"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! \ud83d\udc4b How can I help you with your Google\u202fMaps scraping today?  \n- Tell me the business category, location, and how many results you\u2019d like.  \n- I\u2019ll first check our database to see if that data already exists.  \n- Then I\u2019ll show you a preview of the scrape configuration and ask for confirmation before starting the job."
+    },
+    {
+      "role": "user",
+      "content": "how are you"
+    },
+    {
+      "role": "assistant",
+      "content": "I\u2019m just a bundle of code, so I\u2019m always ready to help! How are you doing today? If you\u2019d like to start a scraping job, just let me know the details and I\u2019ll take care of it."
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey there! \ud83d\udc4b  \nWant to scrape some Google\u202fMaps data? Let me know:\n\n|\u202fItem\u202f|\u202fDetail\u202f|\n|------|--------|\n| Business\u202fcategory (e.g., \u201crestaurants\u201d) |  |\n| City / ZIP / state |  |\n| How many results? |  |\n\nI\u2019ll first check our database, show you the config, and then ask for your confirmation before starting the job."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

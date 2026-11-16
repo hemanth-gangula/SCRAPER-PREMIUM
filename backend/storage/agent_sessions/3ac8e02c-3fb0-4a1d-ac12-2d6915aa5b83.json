@@ -1,0 +1,20 @@
+{
+  "id": "3ac8e02c-3fb0-4a1d-ac12-2d6915aa5b83",
+  "title": "hi",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "created_at": 1794819705.9639256,
+  "updated_at": 1794819706.9939725,
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! \ud83d\udc4b How can I help you with your Google\u202fMaps scraping today?"
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

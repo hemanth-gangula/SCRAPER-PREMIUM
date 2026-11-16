@@ -1,0 +1,20 @@
+{
+  "id": "edb66de8-b44b-4e2b-81c5-e120e915272e",
+  "title": "yes start the job",
+  "provider": "mock",
+  "model": "",
+  "created_at": 1794306269.4280803,
+  "updated_at": 1794306273.6077383,
+  "messages": [
+    {
+      "role": "user",
+      "content": "yes start the job"
+    },
+    {
+      "role": "assistant",
+      "content": "\u26a0\ufe0f I detected a repeated identical call to **list_jobs** with the same arguments. This would create an infinite loop, so I stopped.\n\nHere's what I found before stopping:\n\n- **list_jobs**: {\"total\": 10, \"jobs\": []}\n\nPlease rephrase your request or ask a more specific question."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

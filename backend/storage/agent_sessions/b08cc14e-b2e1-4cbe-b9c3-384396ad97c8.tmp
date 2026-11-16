@@ -1,0 +1,30 @@
+{
+  "id": "b08cc14e-b2e1-4cbe-b9c3-384396ad97c8",
+  "title": "Find exactly 5 unique restaurants in New York, ZIP code 1000\u2026",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "created_at": 1794314992.2526588,
+  "updated_at": 1794315098.7171843,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find exactly 5 unique restaurants in New York, ZIP code 10001. Show me the scraping configuration before starting."
+    },
+    {
+      "role": "assistant",
+      "content": "**Scraping Configuration**\n\n| Field | Value |\n|-------|-------|\n| Category | Restaurant |\n| City | New York |\n| Country | USA |\n| State/Region | NY |\n| ZIP / Postal Code | 10001 |\n| Search Query | `restaurants 10001` |\n| Start Index | 1 |\n| End Index / Job Limit | **5** |\n| Daily Quota | 500 (default) |\n\n*This will scrape exactly 5 unique restaurants in ZIP code\u202f10001.*\n\n**Reply \u201cyes\u201d to start the scraping job.**"
+    },
+    {
+      "role": "user",
+      "content": "yes, go ahead"
+    },
+    {
+      "role": "assistant",
+      "content": "The scraping job has finished, but no records were found:\n\n- **Job ID**: 42194f91\u2011ecb6\u201141e6\u2011bcac\u20112a4fe7b612a5  \n- **Status**: completed  \n- **Results**: 0\n\nIt appears there were no unique restaurants matching the query \u201crestaurants 10001\u201d in the current database.\n\nWould you like to:\n\n1. Modify the search (e.g., broader ZIP, different city/region) and run another job?  \n2. Cancel this request?  \n\nPlease let me know how you\u2019d like to proceed."
+    }
+  ],
+  "job_ids": [
+    "42194f91-ecb6-41e6-bcac-2a4fe7b612a5"
+  ],
+  "metadata": {}
+}

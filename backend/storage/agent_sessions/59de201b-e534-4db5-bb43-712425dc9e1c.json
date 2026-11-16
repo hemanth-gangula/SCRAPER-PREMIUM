@@ -1,0 +1,11 @@
+{
+  "id": "59de201b-e534-4db5-bb43-712425dc9e1c",
+  "title": "New Session",
+  "provider": "groq",
+  "model": "",
+  "created_at": 1794819713.5748713,
+  "updated_at": 1794819713.5748713,
+  "messages": [],
+  "job_ids": [],
+  "metadata": {}
+}

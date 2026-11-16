@@ -1,0 +1,132 @@
+# render.yaml — Render.com Blueprint for Scraper Premium
+# Docs: https://render.com/docs/infrastructure-as-code
+#
+# Services:
+#   1. scraper-premium-backend  — Flask API           (Web Service)
+#   2. scraper-premium-worker   — Node.js Playwright  (Background Worker)
+#   3. scraper-premium-frontend — Next.js             (Static Site)
+#
+# Architecture on Render:
+#   - Backend and Worker share a Persistent Disk (/data/storage)
+#   - Frontend is a static site on Vercel or Render Static
+#   - Worker communicates with Backend over Render's internal network
+#
+# Deploy:
+#   1. Push this repo to GitHub
+#   2. render.com → New → Blueprint → connect repo
+#   3. Set the "sync: false" env vars in the Render dashboard
+#   4. Click Apply
+
+services:
+
+  # ── 1. Flask Backend ─────────────────────────────────────────────────
+  - type: web
+    name: scraper-premium-backend
+    runtime: python
+    region: oregon
+    plan: starter
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && chmod +x build.sh && bash build.sh
+    startCommand: gunicorn -w 2 --timeout 120 --worker-class sync -b 0.0.0.0:$PORT "app:create_app()"
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true
+
+      - key: SCRAPER_STORAGE_DIR
+        value: /data/storage
+
+      # Set these in Render Dashboard (never commit real values)
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SCRAPER_WORKER_TOKEN
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false          # e.g. https://your-app.vercel.app,https://scraper-premium-frontend.onrender.com
+
+      # Worker connection — set to the internal URL after worker deploys
+      # Format: http://scraper-premium-worker:4001  (Render internal DNS)
+      - key: SCRAPER_WORKER_URL
+        sync: false
+      - key: SCRAPER_WORKER_PORT
+        value: "4001"
+
+      # AI Agent LLM
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-20b
+
+      # Limits
+      - key: DEFAULT_DAILY_LIMIT
+        value: "500"
+      - key: DEFAULT_JOB_LIMIT
+        value: "100"
+      - key: MAX_CONCURRENT_JOBS
+        value: "2"
+      - key: REQUEST_DELAY_MS
+        value: "2000"
+      - key: PAGE_LOAD_TIMEOUT_MS
+        value: "30000"
+      - key: HEADLESS
+        value: "true"
+
+    disk:
+      name: scraper-data
+      mountPath: /data
+      sizeGB: 10
+
+  # ── 2. Node.js Playwright Worker ─────────────────────────────────────
+  - type: worker
+    name: scraper-premium-worker
+    runtime: node
+    region: oregon
+    plan: starter
+    rootDir: scraper-engine
+    buildCommand: npm ci && npx playwright install chromium --with-deps
+    startCommand: node src/index.js
+    autoDeploy: true
+
+    envVars:
+      - key: SCRAPER_WORKER_PORT
+        value: "4001"
+      - key: SCRAPER_WORKER_TOKEN
+        sync: false           # must match backend value
+      - key: HEADLESS
+        value: "true"
+      - key: REQUEST_DELAY_MS
+        value: "2000"
+      - key: PAGE_LOAD_TIMEOUT_MS
+        value: "30000"
+      - key: MAX_CONCURRENT_JOBS
+        value: "2"
+      - key: SCRAPER_STORAGE_DIR
+        value: /data/storage
+
+    disk:
+      name: scraper-data     # same disk name — Render shares it between services
+      mountPath: /data
+      sizeGB: 10
+
+  # ── 3. Next.js Frontend (Static Export) ─────────────────────────────
+  - type: web
+    name: scraper-premium-frontend
+    runtime: node
+    region: oregon
+    plan: starter
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE_URL
+        sync: false           # e.g. https://scraper-premium-backend.onrender.com
+      - key: NODE_ENV
+        value: production

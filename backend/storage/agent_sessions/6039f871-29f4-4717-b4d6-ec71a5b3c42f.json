@@ -1,0 +1,16 @@
+{
+  "id": "6039f871-29f4-4717-b4d6-ec71a5b3c42f",
+  "title": "Find 5 restaurants in New York, ZIP code 10001. Collect busi\u2026",
+  "provider": "groq",
+  "model": "",
+  "created_at": 1794304994.3595765,
+  "updated_at": 1794305047.0929372,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find 5 restaurants in New York, ZIP code 10001. Collect business name, address, phone number, website, email and rating. Show me the scraping configuration before starting the job. After I approve, run the existing scraper and export the results to Excel."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

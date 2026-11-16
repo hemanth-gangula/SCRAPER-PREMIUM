@@ -1,0 +1,50 @@
+# Secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Storage (runtime data)
+storage/businesses/
+storage/jobs/
+storage/checkpoints/
+storage/deduplication/
+storage/quotas/
+storage/logs/
+storage/exports/
+storage/backups/
+!storage/.gitkeep
+!storage/settings/.gitkeep
+
+# Browser
+.wdm/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Agent runtime sessions
+storage/agent_sessions/
+
+# Scripts (dev-only)
+backend/scripts/
+
+# Migration reports (runtime output)
+backend/migrations/migration_report_*.json
+backend/migrations/backup_manifest_*.json
+
+# Frontend env.local (local dev only)
+frontend/.env.local

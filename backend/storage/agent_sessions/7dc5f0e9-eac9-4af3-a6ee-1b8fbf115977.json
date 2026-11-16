@@ -1,0 +1,30 @@
+{
+  "id": "7dc5f0e9-eac9-4af3-a6ee-1b8fbf115977",
+  "title": "Find 5 restaurants in New York ZIP 10001. Show me the config\u2026",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "created_at": 1794307881.9248796,
+  "updated_at": 1794307896.2795308,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find 5 restaurants in New York ZIP 10001. Show me the configuration before starting."
+    },
+    {
+      "role": "assistant",
+      "content": "**Proposed Scraping Configuration**\n\n| Parameter | Value |\n|-----------|-------|\n| Category | Restaurant |\n| City | New\u202fYork |\n| Country | United\u202fStates |\n| Postal/ZIP | 10001 |\n| Search Query | `restaurants in 10001, New\u202fYork` |\n| Daily Limit | 500 (default) |\n| Start Index | 1 |\n| End Index | 10001 (max) |\n| Job Limit | 10001 (max) |\n\n> **Note**: No existing records found for this query (0 results returned from the current database).\n\n**Next Steps**\n\n- If this configuration looks correct, reply with **\u201cyes\u201d** to start the scraping job.  \n- If you\u2019d like to adjust any parameter, let me know."
+    },
+    {
+      "role": "user",
+      "content": "yes, go ahead and start the scraping job"
+    },
+    {
+      "role": "assistant",
+      "content": "Your scraping job has been queued.\n\nJob ID: **abbc3838-2627-4c12-af24-0e8362af2d69**\n\nWould you like me to wait until the job finishes? (reply `yes` to wait, or let me know if you prefer to check status later)"
+    }
+  ],
+  "job_ids": [
+    "abbc3838-2627-4c12-af24-0e8362af2d69"
+  ],
+  "metadata": {}
+}

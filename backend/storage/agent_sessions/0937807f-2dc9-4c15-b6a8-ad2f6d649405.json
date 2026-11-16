@@ -1,0 +1,28 @@
+{
+  "id": "0937807f-2dc9-4c15-b6a8-ad2f6d649405",
+  "title": "Find 5 restaurants in New York ZIP 10001",
+  "provider": "mock",
+  "model": "mock-model-v1",
+  "created_at": 1794306234.6186335,
+  "updated_at": 1794306241.0803497,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find 5 restaurants in New York ZIP 10001"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the scraping configuration:\n\n| Parameter | Value |\n|---|---|\n| **Search query** | `restaurants in New York 10001` |\n| **Category** | Restaurant |\n| **City** | New York |\n| **Country** | United States |\n| **Postal code** | 10001 |\n| **Max results** | 5 |\n| **Daily limit** | 500 |\n\n**Fields collected:** name, address, phone, website, email, rating, quality score\n\n> \u2139\ufe0f Found **24 existing records** matching this search. If you proceed, duplicates will be automatically skipped.\n\n**Reply `yes` to start scraping, or tell me to change any parameter.**"
+    },
+    {
+      "role": "user",
+      "content": "yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with that. I have access to your scraper database, jobs, and export tools. What would you like to do?\n\n(Mock provider active \u2014 connect a real LLM via GROQ_API_KEY for full AI capabilities.)"
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

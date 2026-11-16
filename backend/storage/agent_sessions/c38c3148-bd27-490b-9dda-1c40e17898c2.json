@@ -1,0 +1,20 @@
+{
+  "id": "c38c3148-bd27-490b-9dda-1c40e17898c2",
+  "title": "Find 5 restaurants in New York ZIP 10001",
+  "provider": "mock",
+  "model": "mock-model-v1",
+  "created_at": 1794305779.8612838,
+  "updated_at": 1794305785.6950152,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find 5 restaurants in New York ZIP 10001"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is the scraping configuration:\n\n| Parameter | Value |\n|---|---|\n| **Search query** | `restaurants in New York 10001` |\n| **Category** | Restaurant |\n| **City** | New York |\n| **Country** | United States |\n| **Postal code** | 10001 |\n| **Max results** | 5 |\n| **Daily limit** | 500 |\n\n**Fields collected:** name, address, phone, website, email, rating, quality score\n\n> \u2139\ufe0f Found **24 existing records** matching this search. If you proceed, duplicates will be automatically skipped.\n\n**Reply `yes` to start scraping, or tell me to change any parameter.**"
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

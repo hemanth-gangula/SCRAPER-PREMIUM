@@ -1,0 +1,21 @@
+{
+  "name": "scraper-engine",
+  "version": "1.0.0",
+  "description": "Playwright-based Google Maps scraper worker for SCRAPER PREMIUM",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "playwright": "1.48.2",
+    "express": "4.21.1",
+    "dotenv": "16.4.5",
+    "p-queue": "8.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

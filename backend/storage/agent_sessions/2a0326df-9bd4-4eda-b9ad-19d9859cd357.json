@@ -1,0 +1,28 @@
+{
+  "id": "2a0326df-9bd4-4eda-b9ad-19d9859cd357",
+  "title": "Hello",
+  "provider": "mock",
+  "model": "mock-model-v1",
+  "created_at": 1794307165.9378128,
+  "updated_at": 1794307166.0125082,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with that. I have access to your scraper database, jobs, and export tools. What would you like to do?\n\n(Mock provider active \u2014 connect a real LLM via GROQ_API_KEY for full AI capabilities.)"
+    },
+    {
+      "role": "user",
+      "content": "What can you do?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can help you with that. I have access to your scraper database, jobs, and export tools. What would you like to do?\n\n(Mock provider active \u2014 connect a real LLM via GROQ_API_KEY for full AI capabilities.)"
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}

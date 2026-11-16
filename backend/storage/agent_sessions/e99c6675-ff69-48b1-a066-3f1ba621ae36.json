@@ -1,0 +1,28 @@
+{
+  "id": "e99c6675-ff69-48b1-a066-3f1ba621ae36",
+  "title": "Hello",
+  "provider": "mock",
+  "model": "",
+  "created_at": 1794301492.2296004,
+  "updated_at": 1794301533.6825223,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    },
+    {
+      "role": "assistant",
+      "content": "I've reached the maximum number of tool calls for this turn. Please try rephrasing your request or breaking it into smaller steps."
+    },
+    {
+      "role": "user",
+      "content": "What was my first message?"
+    },
+    {
+      "role": "assistant",
+      "content": "I've reached the maximum number of tool calls for this turn. Please try rephrasing your request or breaking it into smaller steps."
+    }
+  ],
+  "job_ids": [],
+  "metadata": {}
+}
