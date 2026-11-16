@@ -9,9 +9,8 @@ import requests
 from typing import Optional
 
 _WORKER_PORT = int(os.environ.get("SCRAPER_WORKER_PORT", 4001))
-_WORKER_TOKEN = os.environ.get("SCRAPER_WORKER_TOKEN", "dev-token")
-# SCRAPER_WORKER_URL overrides the default local address — set this on Render/cloud
-_WORKER_URL = os.environ.get("SCRAPER_WORKER_URL", f"http://127.0.0.1:{_WORKER_PORT}")
+_WORKER_TOKEN = os.environ.get("SCRAPER_WORKER_TOKEN", "dev-token").strip()
+_WORKER_URL = os.environ.get("SCRAPER_WORKER_URL", f"http://127.0.0.1:{_WORKER_PORT}").strip()
 _BASE = _WORKER_URL.rstrip("/")
 _TIMEOUT = 5
 
