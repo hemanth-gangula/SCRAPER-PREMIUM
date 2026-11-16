@@ -16,7 +16,11 @@ _TIMEOUT = 5
 
 
 def _headers() -> dict:
-    return {"Authorization": f"Bearer {_WORKER_TOKEN}", "Content-Type": "application/json"}
+    return {
+        "Authorization": f"Bearer {_WORKER_TOKEN}",
+        "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "true",
+    }
 
 
 def dispatch_job(job_id: str) -> bool:
