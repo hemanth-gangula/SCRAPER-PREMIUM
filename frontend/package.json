@@ -10,7 +10,7 @@
     "lint": "node node_modules/next/dist/bin/next lint"
   },
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "dependencies": {
     "next": "15.0.3",
