@@ -85,8 +85,8 @@ app.get("/worker/jobs/:jobId/progress", (req, res) => {
 
 export function startApiServer() {
   return new Promise((resolve) => {
-    const server = app.listen(CONFIG.port, "127.0.0.1", () => {
-      logger.info(`Worker API listening on http://127.0.0.1:${CONFIG.port}`);
+    const server = app.listen(CONFIG.port, "0.0.0.0", () => {
+      logger.info(`Worker API listening on http://0.0.0.0:${CONFIG.port}`);
       resolve(server);
     });
   });
