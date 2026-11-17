@@ -9,6 +9,9 @@
     "start": "node node_modules/next/dist/bin/next start",
     "lint": "node node_modules/next/dist/bin/next lint"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "next": "15.0.3",
     "react": "18.3.1",
